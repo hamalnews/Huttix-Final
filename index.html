@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ar" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Huutix Elite | منصة النمو الاحترافي المتكاملة - شراء متابعين ولايكات</title>
+    <meta name="title" content="Huutix Elite | منصة النمو الاحترافي المتكاملة" />
+    <meta name="description" content="Huutix Elite هي الوجهة الأولى لتعزيز حضورك على إنستغرام. شراء متابعين حقيقيين، لايكات، ومشاهدات بجودة VIP وضمان استقرار كامل." />
+    <meta name="keywords" content="شراء متابعين إنستغرام, زيادة لايكات, متابعين حقيقيين, Huutix, تسويق إلكتروني" />
+    <meta name="theme-color" content="#020617" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huutix.com/" />
+    <meta property="og:title" content="Huutix Elite | منصة النمو الاحترافي المتكاملة" />
+    <meta property="og:description" content="عزز حضورك الرقمي الآن مع أفضل خدمات إنستغرام في الشرق الأوسط." />
+    <meta property="og:image" content="https://huutix.com/og-image.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.2);
+      }
+      .dark {
+        --glass-bg: rgba(15, 23, 42, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.05);
+      }
+      body {
+        font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #fcfcfd;
+        overflow-x: hidden;
+      }
+      body.dark { background-color: #020617; color: #f8fafc; }
+      .bg-grid {
+        background-image: radial-gradient(circle, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .dark .bg-grid { background-image: radial-gradient(circle, rgba(51, 65, 85, 0.2) 1px, transparent 1px); }
+      
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #2563eb, #7c3aed);
+        z-index: 1000;
+        transition: width 0.1s ease-out;
+      }
+
+      @keyframes highlight-pulse {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+        50% { transform: scale(1.05); box-shadow: 0 0 30px 15px rgba(37, 99, 235, 0.15); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+      }
+      .cart-highlight { animation: highlight-pulse 2s infinite ease-in-out; }
+      
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      .glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+      }
+
+      @keyframes toast-in {
+        from { transform: translateY(100%) translateX(-50%); opacity: 0; }
+        to { transform: translateY(0) translateX(-50%); opacity: 1; }
+      }
+      .toast-animate { animation: toast-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+      /* حركة جذب المستخدم للتمرير الأفقي */
+      @keyframes horizontal-peek {
+        0%, 100% { transform: translateX(0); }
+        20% { transform: translateX(-30px); }
+        40% { transform: translateX(0); }
+        60% { transform: translateX(-15px); }
+        80% { transform: translateX(0); }
+      }
+      .animate-peek {
+        animation: horizontal-peek 2.5s ease-in-out 1.5s;
+      }
+    </style>
+
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.4",
+    "react-dom": "https://esm.sh/react-dom@19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.4/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.564.0",
+    "@google/genai": "https://esm.sh/@google/genai@1.41.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-grid">
+    <div class="scroll-progress" id="scrollBar"></div>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    <script>
+      window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("scrollBar").style.width = scrolled + "%";
+      };
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
